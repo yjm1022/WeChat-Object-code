@@ -1,0 +1,55 @@
+<view>
+  <view class='details_body'>
+    <view class='body_img'>
+      <image src='{{product.proImg}}'></image>
+    </view>
+    <view class="body_main">
+      
+      <view class="main_count">
+        <view class='main_name'>{{product.proName}}</view>
+        <view class='mian_deta'>
+          <text class='money_icon'>￥</text>
+            <text class='date_money'>{{product.proMoney}}</text>
+          <text class="date_stock">库存:</text>
+            <text class="date_stockNum">{{product.proNums}}</text>
+          <text class="date_pin">销量:</text>
+            <text class="date_pinNum">{{product.proAmount}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="main_opt">
+      <view class="opt">
+        <button class="join_cart" data-id='{{product.proId}}' bindtap="addCart">加入购物车</button>
+        <button class="buy">立即购买</button>
+      </view>
+    </view>
+
+    <view class="mian_score">
+      <view class="score_head">
+        <text calss="score_1">共<text class="score_2">八</text>人参与评分</text>
+        <text class="score_3">总评分:<text class="score_4">5</text></text>
+      </view>
+      <view class="score_body">
+          <view>
+            <text>质量杠杠的</text>
+            <text class="nums">****1234</text>  
+          </view>
+          <view>
+            <text>结实耐用</text>
+            <text class="nums">****0908</text>
+          </view>
+          <view>
+            <text>实惠价</text>
+            <text class="nums">****7865</text>
+          </view>
+      </view>
+    </view>
+
+    <view class='mian_details'>
+      
+    </view>
+
+    
+  </view>
+</view>

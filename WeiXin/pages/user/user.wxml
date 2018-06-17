@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="userinfo">
+    <view class="header">
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view class="userinfo-header">
+        <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+        <!--<view wx:if="{{userInfo.gender == 1}}">
+          男
+        </view>
+        <view wx:if="{{userInfo.gender == 2}}">
+          女
+        </view>
+        <view wx:if="{{userInfo.gender == 0}}">
+          未知
+        </view>-->
+      </view>
+    </view>
+  </view>
+  <view  class="h_2"></view>
+  <view class="userinfo-body">
+    <view wx:for="{{userInfoList}}">
+      <view class="userInfoSprit" data-order='{{item.userInfoIorder}}'
+            bindtap='to_about'>
+        <view class='userInfoIcon'>
+          <image src="{{item.userInfoIcon}}"></image>
+        </view>
+        <view class='userInfoIorder'>
+          {{item.userInfoIorder}}
+        </view>
+        <view class='userInfoIcon2'>
+          <image src="{{item.userInfoIcon2}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

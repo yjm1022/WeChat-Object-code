@@ -1,0 +1,75 @@
+/**index.wxss**/
+.slide-image{
+  width:100%;
+  height:150px;
+}
+
+.index_view .index_view_input{
+  width: 90%;
+  height: 80rpx;
+  margin: 15rpx auto;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 80rpx;
+  overflow: hidden;
+  border: 1rpx solid salmon;
+}
+
+.index_class{
+  display: flex;
+  width: 85%;
+  height: 200rpx;
+  margin: 0 auto;
+  flex-direction: row;
+  /*border: 1rpx solid red;*/
+}
+
+.index_class view{
+  width: 25%;
+  height: 150rpx;
+  font-family: 微软雅黑;
+  font-size:0.8em;
+  text-align: center;
+  /*border: 1rpx solid red;*/
+}
+
+.index_class view image{
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.index_body{
+  margin: 20rpx;
+}
+.index_body .body_count{
+  width: 50%;
+  float: left;
+}
+
+.index_body .body_img image{
+  width: 150px;
+  height: 150px;
+}
+
+.body_count .body_proName{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.body_count .body_proMA{
+  opacity: 0.5;
+}
+
+.body_count .body_proMA{
+  opacity: 0.5;
+}
+
+.body_count .body_proMA .proMA_money{
+  color: #FC3D45;
+  margin-right: 50rpx;
+  opacity:1;
+}
+
+.body_count .body_proMA .proMA_proAmount{
+  margin-left: 10rpx;
+}

@@ -1,0 +1,32 @@
+<view class='body'>
+  <view class="swiper-tab">
+      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab" data-cls='新品'>新品</view>
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab" data-cls='锅类'>锅类</view>
+      <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab" data-cls='盆类'>盆类</view>
+      <view class="swiper-tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab" data-cls='蒸笼'>蒸笼</view>
+      <view class="swiper-tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="clickTab" data-cls='桶类'>桶类</view>
+      <view class="swiper-tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="clickTab" data-cls='壶类'>壶类</view>
+  </view>
+  <view class='main'>
+    <view>
+      <block wx:for="{{product}}">
+        <view class='sp_main'>
+          <view class='main_img'>
+            <image src='{{item.proImg}}'></image>
+          </view>
+          <view class='mian_text'>
+              <view class='main_proName'>
+                <text>{{item.proName}}</text>
+              </view>
+              <view>
+                <text>￥</text>
+                <text class='main_proMoney'>{{item.proMoney}}</text>
+                <text>销量:</text>
+                <text class='main_proAmount'>{{item.proAmount}}</text>
+              </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

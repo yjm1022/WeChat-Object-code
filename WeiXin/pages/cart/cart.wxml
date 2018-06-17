@@ -1,0 +1,53 @@
+<view>
+  <view wx:if="{{cart.length <= 0}}" class="cart_no">
+    <view class='cart_no_icon'></view>
+    <view class='cart_no_text'>
+      <view>
+          您的购物车没有商品
+      </view>   
+      <view>
+          赶快去挑选吧!
+      </view>
+    </view>
+    <button class='cart_no_btn' bindtap="to_classify">去挑选</button>
+  </view>
+  <view class="cart_body" wx:else>
+      <block wx:for="{{cart}}" wx:key="{{cart.product.proId}}">
+        <view class="body_main">
+          <view class='body_check'>
+            <checkbox class='check_item'></checkbox>
+          </view>
+          <view class='body_img'>
+            <image src="{{item.product.proImg}}"></image>
+          </view>
+          <view class='bidy_right'>
+            <view class="body_proName">{{item.product.proName}}</view>
+            <view class="body_proMA">
+              <text>￥</text><text class="proMA_proName">{{item.product.proMoney}}</text>
+            </view>
+            <view class='body_count'>
+              <text>数量 : </text>
+              <text>{{item.count}}</text>
+            </view>
+            <button class='body_remove' data-index='{{index}}' bindtap='remove'>
+              删除
+            </button>
+          </view>
+        </view>
+      </block>
+
+      <view class='hr'></view>
+      
+      <view class='buy_main'>
+        <view class='buy_check'>
+          <checkbox checked='' id='check_all' bindtap='checkAll'>全选</checkbox>
+        </view>
+        <view class='buy_t'>
+          <text>合计 : ￥</text>
+          <text class="buy_total">{{totalPay}}</text>
+        </view>
+        <button class='buy_btn'>结算</button>
+      </view>
+      
+    </view>
+</view>

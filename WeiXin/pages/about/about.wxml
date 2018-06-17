@@ -1,0 +1,27 @@
+<view class="main">
+    <view>Q ： 关于我们</view>
+    <view>Q ： 关于我们</view>
+    <view>
+      联系热线 ：
+      <text>16676786543</text>
+    </view>
+    <view>
+      微信：
+      <text>18890908756</text>
+    </view>
+    <view>
+      QQ ：<text>3254934620</text>
+    </view>
+    <view>
+      邮箱:<text>3254934620@qq.com</text>
+    </view>
+    <view>
+      联系热线: <text>16676786543</text>
+    </view>
+    <view>
+      联系人:<text>xxx</text>
+    </view>
+    <view>
+      联系地址:<text>江西省赣州市章贡区沙石镇楼梯岭赣州技师学院</text>
+    </view>
+</view>

@@ -1,0 +1,47 @@
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="index_view">
+    <input bindtap='' class='index_view_input' 
+          placeholder="寻找称心商品"></input>
+  </view> 
+  <view class="index_class">
+    <view class="index_class_whole">
+      <image src="../../image/icon/whole.png"></image>
+      全部商品
+    </view>
+    <view class="index_class_new">
+      <image src="../../image/icon/new.png"></image>
+      新品上市
+    </view>
+    <view class="index_class_discount">
+      <image src="../../image/icon/discount.png"></image>
+      优惠券
+    </view>
+    <view class="index_class_user">
+      <image src="../../image/icon/user.png"></image>
+      用户中心
+    </view>
+  </view>
+
+  <view class="index_body">
+    <block wx:for="{{products}}" wx:key="{{item.proId}}">
+      <view class="body_count" data-index="{{index}}" data-id="{{item.proId}}" bindtap="showDetails">
+        <view class='body_img'>
+          <image src="{{item.proImg}}"></image>
+        </view>
+        <view class="body_proName">{{item.proName}}</view>
+        <view class="body_proMA">
+          <text>￥</text><text class="proMA_money">{{item.proMoney}}</text>
+          <text>销量:</text><text class="proMA_proAmount">{{item.proAmount}}</text>
+        </view>
+      </view>
+    </block>  
+  </view>
+</view>
